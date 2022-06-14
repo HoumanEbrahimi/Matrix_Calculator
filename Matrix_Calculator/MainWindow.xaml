@@ -5,30 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Matrix_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="453" Width="1011">
+        Title="MainWindow" Height="458" Width="1011">
 
-
-
-    <!--   <Grid RenderTransformOrigin="3.943,1.6" ShowGridLines="true" Grid.Column="1" Margin="290,3,-377,1" Grid.RowSpan="3" Name="grid2" Background="#b0e0e6">
-
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition/>
-                <ColumnDefinition/>
-
-
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition/>
-                <RowDefinition/>
-
-
-            </Grid.RowDefinitions>
-
-
-
-
-        </Grid>
-        -->
 
 
     <!--<TextBox Name="box1" Margin="12,66,89,-131" Background="Blue" Grid.ColumnSpan="2" Grid.Row="2"/>
@@ -42,43 +20,42 @@
 
     <Grid>
 
-        <StackPanel  Orientation="Horizontal" Width="416"  Margin="0,343,595,1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
-            <Button Content="Construct" Background="Yellow" Click="Change" Width="88" Height="95"/>
-            <Button Content="test" Background="Yellow" Click="test" Width="88" Height="96"/>
+        <StackPanel  Orientation="Horizontal"  Margin="0,343,766,1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+            <Button Content="Construct" Background="Yellow" Click="Change" Width="88" Height="101"/>
 
 
 
 
         </StackPanel>
 
-        <StackPanel  Orientation="Horizontal"  Margin="581,344,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
-            <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="93"/>
+        <StackPanel  Orientation="Horizontal"  Margin="757,344,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+            <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="98"/>
 
 
 
         </StackPanel>
 
-        <TextBlock Text="Cols" Margin="223,348,488,52" RenderTransformOrigin="-4.837,4.466"/>
-        <TextBlock Text="Rows" Margin="222,394,487,-7" RenderTransformOrigin="0.61,1.503" />
+        <TextBlock Text="Cols" Margin="116,356,595,44" RenderTransformOrigin="-4.837,4.466"/>
+        <TextBlock Text="Rows" Margin="116,399,593,-12" RenderTransformOrigin="0.61,1.503" />
 
-        <TextBox Background="White" Name="Row" Margin="286,394,652,0" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col" Margin="286,344,652,48"/>
+        <TextBox Background="White" Name="Row" Margin="172,394,766,0" RenderTransformOrigin="1.562,0.514"/>
+        <TextBox Background="White" Name="Col" Margin="172,344,766,48"/>
 
-        <TextBlock Text="Cols" Margin="746,348,-35,51" RenderTransformOrigin="-4.837,4.466"/>
-        <TextBlock Text="Rows" Margin="744,395,-35,-8" RenderTransformOrigin="0.61,1.503" />
+        <TextBlock Text="Cols" Margin="879,357,-168,42" RenderTransformOrigin="-4.837,4.466"/>
+        <TextBlock Text="Rows" Margin="879,405,-170,-18" RenderTransformOrigin="0.61,1.503" />
 
-        <TextBox Background="White" Name="Row2" Margin="815,395,109,-1" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col2" Margin="815,344,112,47"/>
+        <TextBox Background="White" Name="Row2" Margin="927,394,0,0" RenderTransformOrigin="1.562,0.514"/>
+        <TextBox Background="White" Name="Col2" Margin="927,344,0,47"/>
         <!--<Grid Name="grid1" ShowGridLines="true" Background="#b0e0e6" Margin="76,42,503,218"/>-->
 
-        <Button Content="+" Background="Yellow" Margin="274,50,652,334" Click="Add"/>
-        <Button Content="-" Background="Yellow" Margin="274,108,652,276" Click="Subtract"/>
-        <Button Content="x" Background="Yellow" Margin="274,166,652,218" Click="Multiply"/>
+        <Button Content="+" Background="Yellow" Margin="329,395,597,0" Click="Add"/>
+        <Button Content="-" Background="Yellow" Margin="329,344,597,47" Click="Subtract"/>
+        <Button Content="x" Background="Yellow" Margin="245,344,682,47" Click="Multiply"/>
+        <Button Content="Det" Background="Yellow" Click="Determinant" Margin="245,395,682,0"/>
 
+        <Grid Name="grid1"  ShowGridLines="true" Background="#b0e0e6" Margin="31,47,766,213"/>
 
-        <Grid Name="grid1"  ShowGridLines="true" Background="#b0e0e6" Margin="22,42,775,218"/>
-
-        <Grid Name="grid2" ShowGridLines="true" Background="#b0e0e6" Margin="395,46,395,213"/>
+        <Grid Name="grid2" ShowGridLines="true" Background="#b0e0e6" Margin="372,47,419,212"/>
 
         <Grid Name="grid3"  ShowGridLines="true" Background="LightGreen" Margin="704,47,93,213"/>
 
