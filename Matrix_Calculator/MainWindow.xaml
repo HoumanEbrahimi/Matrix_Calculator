@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Matrix_Calculator"
         mc:Ignorable="d"
-        Title="MainWindow" Height="458" Width="1011">
+        Title="MainWindow" Height="468" Width="1011">
 
 
 
@@ -20,9 +20,9 @@
 
     <Grid>
 
-        <Image Source="https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png" Margin="-244,0,-245,-101"/>
+        <Image Source="https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png" Margin="-222,2,-222,-103"/>
 
-        <StackPanel  Orientation="Horizontal"  Margin="0,344,766,1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+        <StackPanel  Orientation="Horizontal"  Margin="0,352,711,-1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
             <Button Content="Construct" Background="Yellow" Click="Change" Width="88" Height="101"/>
 
 
@@ -30,29 +30,29 @@
 
         </StackPanel>
 
-        <StackPanel  Orientation="Horizontal"  Margin="757,344,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+        <StackPanel  Orientation="Horizontal"  Margin="675,352,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
             <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="102"/>
 
 
 
         </StackPanel>
 
-        <TextBlock Text="Cols" Margin="116,356,595,44" RenderTransformOrigin="-4.837,4.466"/>
-        <TextBlock Text="Rows" Margin="116,399,593,-12" RenderTransformOrigin="0.61,1.503" />
+        <TextBlock Text="Cols" Margin="151,372,560,28" RenderTransformOrigin="-4.837,4.466"/>
+        <TextBlock Text="Rows" Margin="149,414,560,-27" RenderTransformOrigin="0.61,1.503" />
 
-        <TextBox Background="White" Name="Row" Margin="172,394,766,0" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col" Margin="172,344,766,47"/>
+        <TextBox Background="White" Name="Row" Margin="227,396,711,-1" RenderTransformOrigin="1.562,0.514"/>
+        <TextBox Background="White" Name="Col" Margin="227,352,711,28"/>
 
-        <TextBlock Text="Cols" Margin="879,357,-168,42" RenderTransformOrigin="-4.837,4.466"/>
-        <TextBlock Text="Rows" Margin="879,405,-170,-18" RenderTransformOrigin="0.61,1.503" />
+        <TextBlock Text="Cols" Margin="856,359,-145,40" RenderTransformOrigin="-4.837,4.466"/>
+        <TextBlock Text="Rows" Margin="854,410,-145,-23" RenderTransformOrigin="0.61,1.503" />
 
-        <TextBox Background="White" Name="Row2" Margin="927,394,0,0" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col2" Margin="927,344,0,47"/>
+        <TextBox Background="White" Name="Row2" Margin="937,396,0,0" RenderTransformOrigin="1.562,0.514"/>
+        <TextBox Background="White" Name="Col2" Margin="937,352,0,43"/>
 
-        <Button Content="+" Background="Yellow" Margin="329,395,597,0" Click="Add"/>
-        <Button Content="-" Background="Yellow" Margin="329,344,597,47" Click="Subtract"/>
-        <Button Content="x" Background="Yellow" Margin="245,344,682,47" Click="Multiply"/>
-        <Button Content="Det" Background="Yellow" Click="Determinant" Margin="245,395,682,0"/>
+        <Button Content="+" Background="Yellow" Margin="300,352,626,50" Click="Add"/>
+        <Button Content="-" Background="Yellow" Margin="300,403,626,-1" Click="Subtract"/>
+        <Button Content="x" Background="Yellow" Margin="385,352,542,49" Click="Multiply"/>
+        <Button Content="Det" Background="Yellow" Click="Determinant" Margin="385,403,542,-1" RenderTransformOrigin="-0.119,0.534"/>
 
         <Grid Name="grid1"  ShowGridLines="true" Background="#b0e0e6" Margin="31,47,766,213"/>
 

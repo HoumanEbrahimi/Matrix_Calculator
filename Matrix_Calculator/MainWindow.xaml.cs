@@ -342,13 +342,10 @@ namespace Matrix_Calculator
 
             }
 
-
         }
 
         private void Multiply(object sender, RoutedEventArgs e)
         {
-
-
             int rowResult = 0, colResult = 0, index = 0;
 
             if (col == row2)
@@ -369,7 +366,7 @@ namespace Matrix_Calculator
             int[,] textBox22d = new int[row2, col2];
             int[,] result2d = new int[rowResult, colResult];
 
-            int a = 0, b = 0,n=3;
+            int a = 0, b = 0,n=row2;
             int index1=0, index2 = 0;
 
             int result = 0,result2=0;
@@ -428,7 +425,8 @@ namespace Matrix_Calculator
                     
                     for(int w = 0; w < n; w++)
                     {
-                        result2d[i, j] = int.Parse(textBox2d[i,w].ToString()) * int.Parse(textBox22d[w, j].ToString());
+                        result2d[i, j] += int.Parse(textBox2d[i,w].ToString()) * int.Parse(textBox22d[w, j].ToString());
+                        Console.WriteLine((int.Parse(textBox2d[i, w].ToString()), int.Parse(textBox22d[w, j].ToString())));
 
                     }
 
