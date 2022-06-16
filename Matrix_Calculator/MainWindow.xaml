@@ -20,7 +20,9 @@
 
     <Grid>
 
-        <StackPanel  Orientation="Horizontal"  Margin="0,343,766,1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+        <Image Source="https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png" Margin="-244,0,-245,-101"/>
+
+        <StackPanel  Orientation="Horizontal"  Margin="0,344,766,1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
             <Button Content="Construct" Background="Yellow" Click="Change" Width="88" Height="101"/>
 
 
@@ -29,7 +31,7 @@
         </StackPanel>
 
         <StackPanel  Orientation="Horizontal"  Margin="757,344,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
-            <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="98"/>
+            <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="102"/>
 
 
 
@@ -39,14 +41,13 @@
         <TextBlock Text="Rows" Margin="116,399,593,-12" RenderTransformOrigin="0.61,1.503" />
 
         <TextBox Background="White" Name="Row" Margin="172,394,766,0" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col" Margin="172,344,766,48"/>
+        <TextBox Background="White" Name="Col" Margin="172,344,766,47"/>
 
         <TextBlock Text="Cols" Margin="879,357,-168,42" RenderTransformOrigin="-4.837,4.466"/>
         <TextBlock Text="Rows" Margin="879,405,-170,-18" RenderTransformOrigin="0.61,1.503" />
 
         <TextBox Background="White" Name="Row2" Margin="927,394,0,0" RenderTransformOrigin="1.562,0.514"/>
         <TextBox Background="White" Name="Col2" Margin="927,344,0,47"/>
-        <!--<Grid Name="grid1" ShowGridLines="true" Background="#b0e0e6" Margin="76,42,503,218"/>-->
 
         <Button Content="+" Background="Yellow" Margin="329,395,597,0" Click="Add"/>
         <Button Content="-" Background="Yellow" Margin="329,344,597,47" Click="Subtract"/>
@@ -60,6 +61,9 @@
         <Grid Name="grid3"  ShowGridLines="true" Background="LightGreen" Margin="704,47,93,213"/>
 
 
+        <TextBlock Name="tp1" Margin="378,245,419,140" FontSize="20" />
+
+        
 
 
 
