@@ -13,6 +13,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Runtime.InteropServices;
+using System.Windows.Media;
+
+
 
 namespace Matrix_Calculator
 {
@@ -26,12 +29,13 @@ namespace Matrix_Calculator
         ColumnDefinition colDef1;
 
 
-      //  string operation = "";
+        //  string operation = "";
         List<TextBox> textBox = new List<TextBox>(1000);
-        List<TextBox> textBox2=new List<TextBox>(1000);
+        List<TextBox> textBox2 = new List<TextBox>(1000);
 
-        List<TextBox> resultBox=new List<TextBox>(1000);
+        List<TextBox> resultBox = new List<TextBox>(1000);
 
+        List<TextBox> aux = new List<TextBox>(1);
         int row, col, row2, col2;
 
 
@@ -39,7 +43,9 @@ namespace Matrix_Calculator
 
         public MainWindow()
         {
+
             InitializeComponent();
+
 
         }
         private void Shutdown(object sender, RoutedEventArgs e)
@@ -76,16 +82,19 @@ namespace Matrix_Calculator
 
         private void Change(object sender, RoutedEventArgs e)
         {
+            if (row == 0 && col == 0)
+            {
 
+            }
             int index = 0;
 
-           // AllocConsole();
+            // AllocConsole();
 
-             row = int.Parse(Row.Text);
-             col = int.Parse(Col.Text);
+            row = int.Parse(Row.Text);
+            col = int.Parse(Col.Text);
 
 
-            for(int i=0; i<row*col; i++)
+            for (int i = 0; i < row * col; i++)
             {
                 textBox.Add(new TextBox());
 
@@ -95,11 +104,11 @@ namespace Matrix_Calculator
             for (int i = 0; i < row; i++)
             {
 
-                for (int j=0; j<col; j++)
+                for (int j = 0; j < col; j++)
                 {
                     Grid.SetRow(textBox[index], i);
 
-                    Grid.SetColumn(textBox[index],j);
+                    Grid.SetColumn(textBox[index], j);
 
                     index++;
 
@@ -109,7 +118,7 @@ namespace Matrix_Calculator
 
 
 
-            for(int i = 0; i < row * col; i++)
+            for (int i = 0; i < row * col; i++)
             {
                 grid1.Children.Add(textBox[i]);
 
@@ -146,8 +155,9 @@ namespace Matrix_Calculator
             AllocConsole();
             for (int i = 0; i < textBox.Count; i++)
             {
-                if (Int32.TryParse(textBox[i].Text,out result) && Int32.TryParse(textBox2[i].Text,out result2)){
-                    Console.WriteLine((int.Parse(textBox[i].Text),int.Parse(textBox2[i].Text)));
+                if (Int32.TryParse(textBox[i].Text, out result) && Int32.TryParse(textBox2[i].Text, out result2))
+                {
+                    Console.WriteLine((int.Parse(textBox[i].Text), int.Parse(textBox2[i].Text)));
                 }
             }
 
@@ -158,8 +168,8 @@ namespace Matrix_Calculator
         {
             int index = 0;
 
-             row2 = int.Parse(Row2.Text);
-             col2 = int.Parse(Col2.Text);
+            row2 = int.Parse(Row2.Text);
+            col2 = int.Parse(Col2.Text);
 
 
             for (int i = 0; i < row2 * col2; i++)
@@ -217,16 +227,15 @@ namespace Matrix_Calculator
             int index = 0;
 
             int rowResult = row2;
-            int colResult=col2;
-            
+            int colResult = col2;
+
             for (int i = 0; i < textBox.Count; i++)
             {
-                if (int.TryParse(textBox[i].Text, out result) && int.TryParse(textBox2[i].Text,out two))
+                if (int.TryParse(textBox[i].Text, out result) && int.TryParse(textBox2[i].Text, out two))
                 {
                     resultBox.Add(new TextBox());
                     int val = int.Parse(textBox[i].Text) + int.Parse(textBox2[i].Text);
-                    resultBox[i].Text=val.ToString();
-
+                    resultBox[i].Text = val.ToString();
 
                 }
             }
@@ -258,7 +267,7 @@ namespace Matrix_Calculator
 
             }
 
-            for (int i = 0; i <rowResult; i++)
+            for (int i = 0; i < rowResult; i++)
             {
 
                 rowDef1 = new RowDefinition();
@@ -279,9 +288,9 @@ namespace Matrix_Calculator
 
         }
 
-        private void Subtract (object sender, RoutedEventArgs e)
+        private void Subtract(object sender, RoutedEventArgs e)
         {
-            int result = 0,two = 0,index = 0;
+            int result = 0, two = 0, index = 0;
 
             int rowResult = row2;
             int colResult = col2;
@@ -357,8 +366,8 @@ namespace Matrix_Calculator
                 }
                 catch (Exception ex)
                 {
-                    // Application.Current.Shutdown();
-                    tp1.Text = "error in matrix dimensions, please try again";
+
+                    //tp1.Text = "error in matrix dimensions, please try again";
                 }
             }
 
@@ -366,14 +375,14 @@ namespace Matrix_Calculator
             int[,] textBox22d = new int[row2, col2];
             int[,] result2d = new int[rowResult, colResult];
 
-            int a = 0, b = 0,n=row2;
-            int index1=0, index2 = 0;
+            int a = 0, b = 0, n = row2;
+            int index1 = 0, index2 = 0;
 
-            int result = 0,result2=0;
+            int result = 0, result2 = 0;
 
-            for(int i = 0; i < textBox.Count; i++)
+            for (int i = 0; i < textBox.Count; i++)
             {
-                if(int.TryParse(textBox[i].Text, out result))
+                if (int.TryParse(textBox[i].Text, out result))
                 {
                     index1++;
                 }
@@ -391,13 +400,13 @@ namespace Matrix_Calculator
 
             for (int i = 0; i < row; i++)
             {
-                for(int j = 0; j < col; j++)
+                for (int j = 0; j < col; j++)
                 {
 
                     if (index1 == textBox.Count)
                     {
 
-                        textBox2d[i, j]=int.Parse(textBox[a].Text);
+                        textBox2d[i, j] = int.Parse(textBox[a].Text);
                         a++;
                     }
                 }
@@ -409,7 +418,7 @@ namespace Matrix_Calculator
                 {
                     if (index2 == textBox2.Count)
                     {
-                        textBox22d[i, j]= int.Parse(textBox2[b].Text);
+                        textBox22d[i, j] = int.Parse(textBox2[b].Text);
                         b++;
                     }
                 }
@@ -417,15 +426,15 @@ namespace Matrix_Calculator
 
             AllocConsole();
 
-            for (int i=0;i<rowResult; i++)
+            for (int i = 0; i < rowResult; i++)
             {
 
-                for(int j = 0; j < colResult; j++)
+                for (int j = 0; j < colResult; j++)
                 {
-                    
-                    for(int w = 0; w < n; w++)
+
+                    for (int w = 0; w < n; w++)
                     {
-                        result2d[i, j] += int.Parse(textBox2d[i,w].ToString()) * int.Parse(textBox22d[w, j].ToString());
+                        result2d[i, j] += int.Parse(textBox2d[i, w].ToString()) * int.Parse(textBox22d[w, j].ToString());
                         Console.WriteLine((int.Parse(textBox2d[i, w].ToString()), int.Parse(textBox22d[w, j].ToString())));
 
                     }
@@ -493,6 +502,73 @@ namespace Matrix_Calculator
         }
 
         private void Determinant(object sender, RoutedEventArgs e)
+        {
+            int result = 0;
+            int index = 0, val = 0;
+            aux.Add(new TextBox());
+
+
+            int det = 0;
+
+            if (row != col)
+            {
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                if (row > 2 && col > 2)
+                {
+
+                }
+                else if (row == 2 && col == 2)
+                {
+                    det = 1 / (int.Parse(textBox[0].ToString()) * int.Parse(textBox[3].ToString()) - int.Parse(textBox[1].ToString()) * int.Parse(textBox[2].ToString()));
+                  gridDet1.ColumnDefinitions.Add(colDef1);
+
+                    gridDet1.RowDefinitions.Add(rowDef1);
+                    aux[0].Text = det.ToString();
+                    gridDet1.Children.Add(aux[0]);
+                }
+                else
+                {
+                    Application.Current.Shutdown();
+
+                }
+            }
+
+        }
+
+        private void Determinant2(object sender, RoutedEventArgs e)
+        {
+            rowDef1 = new RowDefinition();
+            grid3.RowDefinitions.Add(rowDef1);
+
+            colDef1 = new ColumnDefinition();
+            grid3.ColumnDefinitions.Add(colDef1);
+
+            if (row != col)
+            {
+                Application.Current.Shutdown();
+            }
+            else
+            {
+                if (row > 2 && col > 2)
+                {
+
+                }
+                else if (row == 2 && col == 2)
+                {
+
+                }
+                {
+
+                }
+            }
+
+
+        }
+
+        private void Invert(object sender, RoutedEventArgs e)
         {
 
         }

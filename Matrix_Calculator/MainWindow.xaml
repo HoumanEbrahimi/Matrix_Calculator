@@ -9,20 +9,11 @@
 
 
 
-    <!--<TextBox Name="box1" Margin="12,66,89,-131" Background="Blue" Grid.ColumnSpan="2" Grid.Row="2"/>
-        <TextBox Name="box2" RenderTransformOrigin="1.516,0.534" Grid.Column="1" Background="Blue" Margin="132,53,-132,-54" Grid.RowSpan="2" Grid.Row="1"/>
-        <TextBox Name="box3" Margin="132,68,-132,-131" Grid.Column="1" Grid.Row="2" Background="Blue" RenderTransformOrigin="0.847,1.571"/>
-        <TextBox Name="box4" Margin="26,68,-26,-132" Background="Blue" Grid.Column="1" Grid.Row="2"/>
-        <TextBox Name="box5" Grid.Column="1" Margin="488,24,-481,-24" Grid.RowSpan="2" Background="Blue" RenderTransformOrigin="1.09,0.969" Grid.Row="1"/>
-        <TextBox Name="box6" Grid.Column="1" Margin="587,24,-580,-24" Grid.RowSpan="2" Background="Blue" Grid.Row="1"/>
-        <TextBox Name="box7" Grid.Column="1" Margin="488,38,-481,-100" Grid.Row="2" Background="Blue"/>
-        <TextBox Name="box8" RenderTransformOrigin="0.647,1.814" Grid.Column="1" Margin="587,38,-580,-99" Grid.Row="2" Background="Blue"/>-->
-
     <Grid>
 
-        <Image Source="https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png" Margin="-222,2,-222,-103"/>
+        <Image Source="https://coolbackgrounds.io/images/backgrounds/index/ranger-4df6c1b6.png" Margin="-233,0,-222,-78"/>
 
-        <StackPanel  Orientation="Horizontal"  Margin="0,352,711,-1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+        <StackPanel  Orientation="Horizontal"  Margin="0,353,711,-1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
             <Button Content="Construct" Background="Yellow" Click="Change" Width="88" Height="101"/>
 
 
@@ -30,7 +21,7 @@
 
         </StackPanel>
 
-        <StackPanel  Orientation="Horizontal"  Margin="675,352,0,0" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
+        <StackPanel  Orientation="Horizontal"  Margin="638,353,-44,-1" RenderTransformOrigin="0.044,0.261" Background="#FF94FF00">
             <Button Content="Construct2" Background="Yellow" Click="Change2" Width="88" Height="102"/>
 
 
@@ -41,27 +32,30 @@
         <TextBlock Text="Rows" Margin="149,414,560,-27" RenderTransformOrigin="0.61,1.503" />
 
         <TextBox Background="White" Name="Row" Margin="227,396,711,-1" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col" Margin="227,352,711,28"/>
+        <TextBox Background="White" Name="Col" Margin="227,353,711,43"/>
 
         <TextBlock Text="Cols" Margin="856,359,-145,40" RenderTransformOrigin="-4.837,4.466"/>
         <TextBlock Text="Rows" Margin="854,410,-145,-23" RenderTransformOrigin="0.61,1.503" />
 
-        <TextBox Background="White" Name="Row2" Margin="937,396,0,0" RenderTransformOrigin="1.562,0.514"/>
-        <TextBox Background="White" Name="Col2" Margin="937,352,0,43"/>
+        <TextBox Background="White" Name="Row2" Margin="937,396,-17,0" RenderTransformOrigin="1.562,0.514"/>
+        <TextBox Background="White" Name="Col2" Margin="937,353,-17,43"/>
 
-        <Button Content="+" Background="Yellow" Margin="300,352,626,50" Click="Add"/>
-        <Button Content="-" Background="Yellow" Margin="300,403,626,-1" Click="Subtract"/>
-        <Button Content="x" Background="Yellow" Margin="385,352,542,49" Click="Multiply"/>
-        <Button Content="Det" Background="Yellow" Click="Determinant" Margin="385,403,542,-1" RenderTransformOrigin="-0.119,0.534"/>
+        <Button Content="+" Background="Yellow" Margin="300,353,626,49" Click="Add"/>
+        <Button Content="-" Background="Yellow" Margin="385,353,541,49" Click="Subtract"/>
+        <Button Content="x" Background="Yellow" Margin="470,353,457,49" Click="Multiply"/>
+        <Button Content="Det" Background="Yellow" Click="Determinant2" Margin="372,265,555,140" RenderTransformOrigin="-0.119,0.534"/>
+        <Button Content="Inverse" Background="Yellow" Click="Invert" Margin="300,402,626,-1" RenderTransformOrigin="-0.119,0.534"/>
+        <Button Content="Det" Background="Orange" Click="Determinant" Margin="31,262,892,140"/>
+        <Grid Background="White" Name="gridDet1" Margin="119,262,804,140"/>
 
-        <Grid Name="grid1"  ShowGridLines="true" Background="#b0e0e6" Margin="31,47,766,213"/>
 
-        <Grid Name="grid2" ShowGridLines="true" Background="#b0e0e6" Margin="372,47,419,212"/>
+        <Grid Name="grid2"  ShowGridLines="true" Background="#b0e0e6" Margin="372,47,419,213"/>
+
+        <Grid Name="grid1" ShowGridLines="true" Background="#b0e0e6" Margin="0,47,791,213"/>
 
         <Grid Name="grid3"  ShowGridLines="true" Background="LightGreen" Margin="704,47,93,213"/>
 
 
-        <TextBlock Name="tp1" Margin="378,245,419,140" FontSize="20" />
 
         
 
