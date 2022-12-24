@@ -46,7 +46,7 @@
         <Button Content="Det" Background="Yellow" Click="Determinant2" Margin="372,265,555,140" RenderTransformOrigin="-0.119,0.534"/>
         <Button Content="Inverse" Background="Yellow" Click="Invert" Margin="300,402,626,-1" RenderTransformOrigin="-0.119,0.534"/>
         <Button Content="Det" Background="Orange" Click="Determinant" Margin="31,262,892,140"/>
-        <Grid Background="White" Name="gridDet1" Margin="119,262,804,140"/>
+        <Grid Background="White" Name="gridDet1" Margin="119,262,804,140" ShowGridLines="true" />
 
 
         <Grid Name="grid2"  ShowGridLines="true" Background="#b0e0e6" Margin="372,47,419,213"/>

@@ -130,7 +130,6 @@ namespace Matrix_Calculator
             {
 
                 rowDef1 = new RowDefinition();
-
                 grid1.RowDefinitions.Add(rowDef1);
 
             }
@@ -506,34 +505,50 @@ namespace Matrix_Calculator
             int result = 0;
             int index = 0, val = 0;
             aux.Add(new TextBox());
+            int[] holder = new int[textBox.Count];
+            rowDef1 = new RowDefinition();
+            colDef1 = new ColumnDefinition();
+            double det = 0;
 
-
-            int det = 0;
-
+            for (int i = 0; i < textBox.Count; i++)
+            {
+                if (int.TryParse(textBox[i].Text, out result))
+                {
+                    holder[i] = int.Parse(textBox[i].Text);
+                    index++;
+                }
+            }
             if (row != col)
             {
                 Application.Current.Shutdown();
             }
             else
             {
-                if (row > 2 && col > 2)
-                {
 
-                }
-                else if (row == 2 && col == 2)
-                {
-                    det = 1 / (int.Parse(textBox[0].ToString()) * int.Parse(textBox[3].ToString()) - int.Parse(textBox[1].ToString()) * int.Parse(textBox[2].ToString()));
-                  gridDet1.ColumnDefinitions.Add(colDef1);
+                    if (row > 2 && col > 2)
+                    {
 
-                    gridDet1.RowDefinitions.Add(rowDef1);
-                    aux[0].Text = det.ToString();
-                    gridDet1.Children.Add(aux[0]);
-                }
-                else
-                {
-                    Application.Current.Shutdown();
+                    }
+                    else if (row == 2 && col == 2)
+                    {
 
-                }
+                    if (index == textBox.Count)
+                    {
+                        det = 1 / (holder[0]*holder[3]-holder[1]*holder[2]);
+
+                    }
+                    gridDet1.ColumnDefinitions.Add(colDef1);
+
+                        gridDet1.RowDefinitions.Add(rowDef1);
+                        aux[0].Text = det.ToString();
+                        gridDet1.Children.Add(aux[0]);
+                    }
+                    else
+                    {
+                        Application.Current.Shutdown();
+
+                    }
+                
             }
 
         }
